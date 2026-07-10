@@ -19,15 +19,20 @@ H2 Database / MySQL
 Maven
 RestTemplate
 Architecture
-                 Client (Postman)
-                        │
-        ┌───────────────┴───────────────┐
-        ▼                               ▼
- Student Service (8080)          Marks Service (8081)
-        │                               │
- Student Database                 Marks Database
-        ▲                               │
-        └──────────── REST API ─────────┘
+
+
+
+                                         Client (Postman)
+                                                │
+                                ┌───────────────┴───────────────┐
+                                ▼                               ▼
+                         Student Service (8080)          Marks Service (8081)
+                                │                               │
+                         Student Database                 Marks Database
+                                ▲                               │
+                                └──────────── REST API ─────────┘
+
+
 
 APIs
 Method	URL	Description
