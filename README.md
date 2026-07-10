@@ -51,3 +51,68 @@ Marks are stored in Marks Service.
 Marks Service sends an HTTP GET request to Student Service using the studentId.
 Student Service returns the student's name and email.
 Marks Service combines student details with marks and returns the final response.
+
+Project Structure
+Student Service
+
+    StudentService
+    │
+    ├── controller
+    ├── service
+    ├── repository
+    ├── entity
+    └── StudentApplication.java
+    
+Marks Service
+
+    MarksService
+    │
+    ├── controller
+    ├── service
+    ├── repository
+    ├── dto
+    ├── entity
+    ├── config
+    └── MarksApplication.java
+    
+Running the Project
+Step 1
+
+Start Student Service.
+
+http://localhost:8080
+Step 2
+
+Start Marks Service.
+
+http://localhost:8081
+Step 3
+
+Create a student using the Student Service.
+
+Step 4
+
+Create marks using the generated studentId.
+
+Step 5
+
+The Marks Service calls the Student Service internally and returns the combined student and marks information.
+
+Features
+    Two independent Spring Boot services
+    REST API communication using RestTemplate
+    Separate databases for each service
+    CRUD operations
+    Student and Marks management
+    Automatic total marks calculation
+    Layered architecture (Controller → Service → Repository → Entity)
+    Microservices communication using HTTP
+Future Enhancements
+    Grade calculation (A, B, C, etc.)
+    Pass/Fail status
+    JWT Authentication
+    API Gateway
+    Service Discovery (Eureka)
+    OpenFeign instead of RestTemplate
+    MySQL deployment
+    Docker support
